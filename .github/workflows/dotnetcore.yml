@@ -18,9 +18,9 @@ jobs:
       with:
         dotnet-version: 3.1.201
     - name: Build
-      run: dotnet build -c Release LevelOfEffortTodo.csproj
+      run: dotnet build -c Release ./LevelOfEffortTodo.csproj
     - name: Publish 
-      run: dotnet publish -c Release LevelOfEffortTodo.csproj
+      run: dotnet publish -c Release ./LevelOfEffortTodo.csproj
     - name: Deploy to Netlify
       uses: netlify/actions/cli@master #uses Netlify Cli actions
       env: # these environment variables are added in github secrets
